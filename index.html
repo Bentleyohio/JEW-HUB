@@ -63,60 +63,53 @@
         </header>
 
         <div class="game-grid">
+
+            <!-- Ragdoll Hit -->
             <div class="game-card">
                 <div class="game-thumb">🥊</div>
                 <div class="game-info">
                     <h3>Ragdoll Hit</h3>
-                    <button class="play-btn" onclick="launchGame('ragdoll-hit.html')">PLAY NOW</button>
+                    <button class="play-btn" onclick="launchGame('Games/ragdoll-hit.html')">PLAY NOW</button>
                 </div>
             </div>
+
+            <!-- Basket Random -->
+            <div class="game-card">
+                <div class="game-thumb">🏀</div>
+                <div class="game-info">
+                    <h3>Basket Random</h3>
+                    <button class="play-btn" onclick="launchGame('Games/Basket-random.html')">PLAY NOW</button>
+                </div>
+            </div>
+
+            <!-- Crazy Cattle 3D -->
+            <div class="game-card">
+                <div class="game-thumb">🐮</div>
+                <div class="game-info">
+                    <h3>Crazy Cattle 3D</h3>
+                    <button class="play-btn" onclick="launchGame('Games/Crazy-cattle-3d.html')">PLAY NOW</button>
+                </div>
+            </div>
+
+            <!-- Elastic Man -->
+            <div class="game-card">
+                <div class="game-thumb">😵</div>
+                <div class="game-info">
+                    <h3>Elastic Man</h3>
+                    <button class="play-btn" onclick="launchGame('Games/Elastic-man.html')">PLAY NOW</button>
+                </div>
+            </div>
+
         </div>
     </main>
-
-<!-- Ragdoll Hit -->
-<div class="game-card">
-    <div class="game-thumb">🥊</div>
-    <div class="game-info">
-        <h3>Ragdoll Hit</h3>
-        <button class="play-btn" onclick="launchGame('Games/ragdoll-hit/ragdoll-hit.html')">PLAY NOW</button>
-    </div>
-</div>
-
-<!-- Basket Random -->
-<div class="game-card">
-    <div class="game-thumb">🏀</div>
-    <div class="game-info">
-        <h3>Basket Random</h3>
-        <button class="play-btn" onclick="launchGame('Games/basket-random/Basket-random.html')">PLAY NOW</button>
-    </div>
-</div>
-
-<!-- Crazy Cattle 3D -->
-<div class="game-card">
-    <div class="game-thumb">🐮</div>
-    <div class="game-info">
-        <h3>Crazy Cattle 3D</h3>
-        <button class="play-btn" onclick="launchGame('Games/crazy-cattle-3d/Crazy-cattle-3d.html')">PLAY NOW</button>
-    </div>
-</div>
-
-<!-- Elastic Man -->
-<div class="game-card">
-    <div class="game-thumb">😵</div>
-    <div class="game-info">
-        <h3>Elastic Man</h3>
-        <button class="play-btn" onclick="launchGame('Games/elastic-man/Elastic-man.html')">PLAY NOW</button>
-    </div>
-</div>
-
-
 
     <div id="gameOverlay">
         <span class="close-btn" onclick="terminateGame()">&times;</span>
         <iframe id="gameIframe" src="" allow="autoplay; fullscreen; keyboard"></iframe>
     </div>
+
 <script>
- function launchGame(url) {
+function launchGame(url) {
     const cacheBuster = url + "?v=" + Math.random();
     document.getElementById('gameIframe').src = cacheBuster;
     document.getElementById('gameOverlay').style.display = "block";
@@ -126,7 +119,6 @@ function terminateGame() {
     document.getElementById('gameOverlay').style.display = "none";
     document.getElementById('gameIframe').src = "";
 }
-
 </script>
 
 </body>
